@@ -1,113 +1,233 @@
+"use client"
+import Head from 'next/head';
 import Image from 'next/image'
+import { useEffect } from 'react';
+import { clarity } from 'react-microsoft-clarity';
+import "react-multi-carousel/lib/styles.css";
+
 
 export default function Home() {
+
+  // Clarity
+  useEffect(() => {
+    clarity.init('k0lg58jnzr');
+  }
+    , []);
+
+  useEffect(() => {
+    // Function to initialize Calendly script
+    const initializeCalendlyScript = () => {
+      // Check if Calendly is defined
+      if (typeof window.Calendly !== 'undefined') {
+        // Initialize Calendly inline widget
+        window.Calendly.initInlineWidget({
+          url: 'https://calendly.com/jefferyjohn/45-minute-meeting?hide_event_type_details=1&hide_gdpr_banner=1',
+        });
+      } else {
+        // Retry initialization after a delay
+        setTimeout(initializeCalendlyScript, 1000);
+      }
+    };
+
+    // Load Calendly script only if it hasn't been loaded before
+    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      script.onload = initializeCalendlyScript;
+      document.head.appendChild(script);
+    } else {
+      initializeCalendlyScript();
+    }
+
+    // Cleanup function to remove the script when the component unmounts
+    return () => {
+      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <main>
+      <Head>
+        {/* Calendly Widget Script */}
+        <script
+          type="text/javascript"
+          src="https://assets.calendly.com/assets/external/widget.js"
+          async
         />
-      </div>
+      </Head>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <script
+        dangerouslySetInnerHTML={
+          {
+            __html: `
+         (function(c,l,a,r,i,t,y){
+             c[a] = c[a] || function () { (c[a].q = c[a].q || 
+             []).push(arguments) };
+             t=l.createElement(r);
+             t.async=1;
+             t.src="https://www.clarity.ms/tag/"+i;
+             y=l.getElementsByTagName(r)[0];
+             y.parentNode.insertBefore(t,y);
+         })(window, document, "clarity", "script", "k0lg58jnzr");`,
+          }}
+      />
+      <header className="flex justify-end items-start">
+        <div className="nav">
+          <ul className="flex space-x-4">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="https://docs.google.com/document/d/1P_OGRLE3YFpMaA_HrIfT9GhvJX6ZVo1uLXGaagscEcE/export?format=pdf">Resume</a></li>
+            <li><a href="https://docs.google.com/document/d/1_hXpiQh4v_hvvW-0ZLLrTg2pLDjdtK_U/edit?usp=sharing&ouid=103091850561061166757&rtpof=true&sd=true">98-019</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </header>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      <section className="hero relative">
+        <div className="hero-container relative">
+          {/* Image */}
+          <div className="hero-image relative">
+            <Image src="/hero.png" alt="Jeffery John" width={300} height={300} className="object-cover w-full h-full" />
+          </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+          {/* Text */}
+          <div className="hero-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
+            <h1 className="text-6xl font-bold">Jeffery John</h1>
+            <h2 className="text-2xl">Developer & Designer</h2>
+            <p className="text-xl">Carnegie Mellon University</p>
+          </div>
+        </div>
+      </section>
+      <section className="media">
+        <h1 className="text-6xl font-bold text-center">Media</h1>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="col">
+            <a href="https://top.mlh.io/2022/profiles/jeffery-john" className="block h-48">
+              <Image src="/test-1.png" alt="Jeffery John" width={300} height={300} className="object-cover w-full h-full" />
+            </a>
+          </div>
+          <div className="col">
+            <a href="https://www.instagram.com/p/B1WW17PpF61/" className="block h-48">
+              <Image src="/test-2.png" alt="Jeffery John" width={300} height={300} className="object-cover w-full h-full" />
+            </a>
+          </div>
+          <div className="col">
+            <a href="https://top.mlh.io/2022/profiles/jeffery-john" className="block h-48">
+              <Image src="/test-3.jpg" alt="Jeffery John" width={300} height={300} className="object-cover w-full h-full" />
+            </a>
+          </div>
+          <div className="col">
+            <a href="https://top.mlh.io/2022/profiles/jeffery-john" className="block h-48">
+              <Image src="/test-4.jpg" alt="Jeffery John" width={300} height={300} className="object-cover w-full h-full" />
+            </a>
+          </div>
+          <div className="col">
+            <a href="https://top.mlh.io/2022/profiles/jeffery-john" className="block h-48">
+              <Image src="/test-5.png" alt="Jeffery John" width={300} height={300} className="object-cover w-full h-full" />
+            </a>
+          </div>
+          <div className="col">
+            <a href="https://top.mlh.io/2022/profiles/jeffery-john" className="block h-48">
+              <Image src="/test-6.png" alt="Jeffery John" width={300} height={300} className="object-cover w-full h-full" />
+            </a>
+          </div>
+          <div className="col">
+            <a href="https://top.mlh.io/2022/profiles/jeffery-john" className="block h-48">
+              <Image src="/test-7.jpg" alt="Jeffery John" width={300} height={300} className="object-cover w-full h-full" />
+            </a>
+          </div>
+          <div className="col">
+            <a href="https://top.mlh.io/2022/profiles/jeffery-john" className="block h-48">
+              <Image src="/test-8.jpg" alt="Jeffery John" width={300} height={300} className="object-cover w-full h-full" />
+            </a>
+          </div>
+          <div className="col">
+            <a href="https://top.mlh.io/2022/profiles/jeffery-john" className="block h-48">
+              <Image src="/test-9.png" alt="Jeffery John" width={300} height={300} className="object-cover w-full h-full" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+
+      <section className="projects">
+        <h1 className="text-6xl font-bold text-center">Projects</h1>
+
+        <div className="carousel-container overflow-hidden relative">
+          <div className="carousel-wrapper flex animate-slide" id="carousel">
+            {/* First carousel item */}
+            <div className="carousel-item">
+              <a href="https://blink-weld.vercel.app/" className="">
+                <Image src="/c1.png" alt="Jeffery John" width={300} height={300} className="object-cover w-full h-full" />
+              </a>
+            </div>
+
+            {/* Second carousel item */}
+            <div className="carousel-item">
+              <a href="https://jefferyjohn.github.io/poke/" className="">
+                <Image src="/c2.png" alt="Image 2" width={300} height={300} className="object-cover w-full h-full" />
+              </a>
+            </div>
+
+            {/* Third carousel item */}
+            <div className="carousel-item">
+              <a href="https://irislunarrover.space/" className="">
+                <Image src="/c3.png" alt="Image 3" width={300} height={300} className="object-cover w-full h-full" />
+              </a>
+            </div>
+
+            {/* Add more carousel items as needed */}
+          </div>
+
+          <style jsx>{`
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .animate-slide {
+      animation: slide 15s linear infinite;
+    }
+
+    .animate-slide:hover {
+      animation-play-state: paused;
+    }
+
+    .carousel-wrapper {
+      display: flex; /* Ensure all carousel items are in a row */
+      width: 300%; /* Set the width based on the number of slides */
+    }
+
+    .carousel-item {
+      flex: 0 0 33.33%; /* Each carousel item takes up 1/3 of the container width */
+    }
+  `}</style>
+        </div>
+
+      </section>
+      <section className="contact">
+        <h1 className="text-6xl font-bold text-center">Contact</h1>
+
+        <div className="calendly-container">
+          <div className="calendly-inline-widget" style={{ minWidth: '320px', height: '700px' }} />
+        </div>
+
+        <style jsx>{`
+        .calendly-container {
+          overflow: hidden;
+        }
+      `}</style>
+      </section>
+    </main >
   )
 }
