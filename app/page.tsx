@@ -18,9 +18,9 @@ export default function Home() {
     // Function to initialize Calendly script
     const initializeCalendlyScript = () => {
       // Check if Calendly is defined
-      if (typeof window.Calendly !== 'undefined') {
+      if ((window as any).Calendly !== 'undefined') {
         // Initialize Calendly inline widget
-        window.Calendly.initInlineWidget({
+        (window as any).Calendly.initInlineWidget({
           url: 'https://calendly.com/jefferyjohn/45-minute-meeting?hide_event_type_details=1&hide_gdpr_banner=1',
         });
       } else {
