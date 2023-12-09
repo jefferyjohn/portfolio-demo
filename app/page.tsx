@@ -62,22 +62,22 @@ export default function Home() {
           <div className="hero-text absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
             <h1 id="name" className="text-8xl font-bold">JEFFERY JOHN</h1>
             <div className="socials flex justify-center space-x-4 mt-4">
-              <a href="https://www.linkedin.com/in/jefferyjohn/" target="_blank" rel="noopener noreferrer" className="social">
+              <a href="https://www.linkedin.com/in/jefferyjohn/" target="_blank" rel="noopener noreferrer" className="social" aria-label="LinkedIn">
                 <FontAwesomeIcon icon={faLinkedin} size="3x" />
               </a>
-              <a href="https://www.youtube.com/@jefferyjohn" target="_blank" rel="noopener noreferrer" className="social">
+              <a href="https://www.youtube.com/@jefferyjohn" target="_blank" rel="noopener noreferrer" className="social" aria-label="YouTube">
                 <FontAwesomeIcon icon={faYoutube} size="3x" />
               </a>
-              <a href="https://github.com/jefferyjohn" target="_blank" rel="noopener noreferrer" className="social">
+              <a href="https://github.com/jefferyjohn" target="_blank" rel="noopener noreferrer" className="social" aria-label="GitHub">
                 <FontAwesomeIcon icon={faGithub} size="3x" />
               </a>
-              <a href="https://www.instagram.com/jefferyjohn_/" target="_blank" rel="noopener noreferrer" className="social">
+              <a href="https://www.instagram.com/jefferyjohn_/" target="_blank" rel="noopener noreferrer" className="social" aria-label="Instagram">
                 <FontAwesomeIcon icon={faInstagram} size="3x" />
               </a>
-              <a href="https://open.spotify.com/user/themagicalwarlock" target="_blank" rel="noopener noreferrer" className="social">
+              <a href="https://open.spotify.com/user/themagicalwarlock" target="_blank" rel="noopener noreferrer" className="social" aria-label="Spotify">
                 <FontAwesomeIcon icon={faSpotify} size="3x" />
               </a>
-              <a href="mailto:jefferyjohn@cmu.edu" target="_blank" rel="noopener noreferrer" className="social">
+              <a href="mailto:jefferyjohn@cmu.edu" target="_blank" rel="noopener noreferrer" className="social" aria-label="Email">
                 <FontAwesomeIcon icon={faEnvelope} size="3x" />
               </a>
             </div>
@@ -85,7 +85,7 @@ export default function Home() {
               <h3 id="description" className="text-2xl">Hi! I&apos;m a developer, maker, and hacker @ Carnegie Mellon University.</h3>
               {/* Animated Arrows */}
               <div className="flex justify-center space-x-4 mt-4 pt-36 animate-bounce">
-                <a href="#media">
+                <a href="#media" aria-label="arrow down to media section">
                   <FontAwesomeIcon icon={faArrowDown} size="2x" />
                 </a>
               </div>
@@ -183,7 +183,7 @@ export default function Home() {
             <div className="carousel-wrapper flex animate-slide" id="carousel">
 
               <div className="carousel-item">
-                <a href="https://blink-weld.vercel.app/" >
+                <a href="https://blink-weld.vercel.app/"  >
                   <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
                     <Image src="/projects/blink.png" alt="Retrieval Augmented Generation Chat App" width={700} height={700} className="object-cover w-1/3 carousel-image" />
                     <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>RAG Chat App</div>
@@ -242,7 +242,7 @@ export default function Home() {
 
               </div>
               <div className="carousel-item">
-                <a href="https://jefferyjohn.github.io/poke/">
+                <a href="https://jefferyjohn.github.io/poke/" aria-label="Physics based siumulator with drawing">
                   <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
                     <Image src="/projects/poke.png" alt="Physics based simulator with drawing" width={700} height={700} className="object-cover w-1/3 carousel-image" />
                     <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>Physics simulator</div>

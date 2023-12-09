@@ -22,11 +22,6 @@ export const metadata: Metadata = {
     siteName: 'Jeffery John',
     images: [
       {
-        url: 'https://i.imgur.com/zwMN9dg.png',
-        width: 800,
-        height: 600,
-      },
-      {
         url: 'https://i.imgur.com/jBdBcvT.png',
         width: 630,
         height: 1200,
