@@ -11,6 +11,8 @@ import { faLinkedin, faYoutube, faGithub, faInstagram, faSpotify } from '@fortaw
 import { faEnvelope, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 import { InlineWidget } from 'react-calendly';
+import Script from 'next/script'
+
 
 export default function Home() {
 
@@ -23,11 +25,11 @@ export default function Home() {
   return (
     <main>
       <Head>
-        <script src="https://kit.fontawesome.com/cafed16778.js" crossOrigin="anonymous"></script>
+        <Script src="https://kit.fontawesome.com/cafed16778.js" crossOrigin="anonymous"></Script>
       </Head>
 
 
-      <script
+      <Script
         // As a limitation of the NextJS, this is the only reliable way for the analytics script to be loaded
         dangerouslySetInnerHTML={
           {
@@ -87,8 +89,8 @@ export default function Home() {
                 <FontAwesomeIcon icon={faEnvelope} size="3x" />
               </a>
             </div>
-            <div id="about" className="pt-16">
-              <h3 id="description" className="text-2xl">Hi! I'm a developer, maker, and hacker @ Carnegie Mellon University.</h3>
+            <div id="about" className="pt-16">              
+              <h3 id="description" className="text-2xl">Hi! I&apos;m a developer, maker, and hacker @ Carnegie Mellon University.</h3>
               {/* Animated Arrows */}
               <div className="flex justify-center space-x-4 mt-4 pt-36 animate-bounce">
                 <a href="#media">
