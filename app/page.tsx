@@ -1,5 +1,4 @@
 "use client"
-import Head from 'next/head';
 import Image from "next/legacy/image"
 import { useEffect } from 'react';
 import { clarity } from 'react-microsoft-clarity';
@@ -24,13 +23,9 @@ export default function Home() {
 
   return (
     <main>
-      <Head>
-        <Script src="https://kit.fontawesome.com/cafed16778.js" crossOrigin="anonymous"></Script>
-      </Head>
-
 
       <Script
-        // As a limitation of the NextJS, this is the only reliable way for the analytics script to be loaded
+        // As a limitation of NextJS, this is the only reliable way for the analytics script to be loaded
         dangerouslySetInnerHTML={
           {
             __html: `
@@ -45,6 +40,9 @@ export default function Home() {
          })(window, document, "clarity", "script", "k0lg58jnzr");`,
           }}
       />
+      <Script src="https://kit.fontawesome.com/cafed16778.js" crossOrigin="anonymous"></Script>
+
+
       <header className="flex justify-end items-start">
         <div className="nav shadow-lg">
           <ul className="flex space-x-4 pt-5 pr-16 shadow-xl rounded-full p-3">
@@ -89,7 +87,7 @@ export default function Home() {
                 <FontAwesomeIcon icon={faEnvelope} size="3x" />
               </a>
             </div>
-            <div id="about" className="pt-16">              
+            <div id="about" className="pt-16">
               <h3 id="description" className="text-2xl">Hi! I&apos;m a developer, maker, and hacker @ Carnegie Mellon University.</h3>
               {/* Animated Arrows */}
               <div className="flex justify-center space-x-4 mt-4 pt-36 animate-bounce">
