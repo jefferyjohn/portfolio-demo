@@ -2,7 +2,6 @@
     position: fixed;
     top: 0;
     right: 0;
-    height: 100%;
     z-index: 1000;
 }
 
@@ -12,6 +11,8 @@
         right: auto;
         width: 100%;
         height: auto;
+        /* Allow clicking through to media */
+        pointer-events: none;
     }
 }
 
@@ -48,12 +49,16 @@ body {
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
 
 .animate-slide {
-    animation: slide 15s linear infinite;
+    animation: slide 10s linear infinite;
+}
+
+.animate-slide:hover {
+    animation-play-state: paused;
 }
 
 .carousel-wrapper {
@@ -63,6 +68,12 @@ body {
 
 .carousel-item {
     flex: 0 0 16.67%;
+    padding:0px;
+    margin: 0px;
+}
+
+.carousel-item:hover {
+    border: 10px solid #c42130;
 }
 
 #calendly {

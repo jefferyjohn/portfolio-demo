@@ -44,7 +44,7 @@ export default function Home() {
           }}
       />
       <header className="flex justify-end items-start">
-        <div className="nav shadow-lg ">
+        <div className="nav shadow-lg">
           <ul className="flex space-x-4 pt-5 pr-16 shadow-xl rounded-full p-3">
             <li><a href="#home" className="text-xl">Home</a></li>
             <li><a href="https://docs.google.com/document/d/1P_OGRLE3YFpMaA_HrIfT9GhvJX6ZVo1uLXGaagscEcE/export?format=pdf" className="text-xl">Resume</a></li>
@@ -109,7 +109,7 @@ export default function Home() {
                   <a href="https://top.mlh.io/2022/profiles/jeffery-john" className="">
                     <Image src="/media/mlh-top50.png" alt="Major League Hacking Top 50" width={400} height={400} className="object-cover w-full" />
                   </a>
-                </div> 
+                </div>
                 <div className="news-item">
                   <a href="https://www.redandblack.com/uganews/uga-s-small-satellite-research-lab-looks-to-the-stars-for-solutions-on-earth/article_0d71f854-36d3-11ec-8210-6f0ff0ab47f6.html" className="">
                     <Image src="/media/small-sat.png" alt="UGA Small Satellite Research Lab" width={400} height={400} className="object-cover w-full" />
@@ -190,8 +190,38 @@ export default function Home() {
                   <Image src="/projects/rocket-club.png" alt="Carnegie Mellon Rocket Command" width={700} height={700} className="object-cover w-1/3 " />
                 </a>
               </div>
+              {/* Duplicate slides so that it's a seamless loop */}
+              <div className="carousel-item">
+                <a href="https://blink-weld.vercel.app/" className="">
+                  <Image src="/projects/blink.png" alt="Retrieval Augmented Generation Chat App" width={700} height={700} className="object-cover w-1/3 " />
+                </a>
+              </div>
+              <div className="carousel-item">
+                <a href="https://jefferyjohn.github.io/poke/" className="">
+                  <Image src="/projects/poke.png" alt="Physics based simulator with drawing" width={700} height={700} className="object-cover w-1/3 " />
+                </a>
+              </div>
+              <div className="carousel-item">
+                <a href="https://irislunarrover.space/" className="">
+                  <Image src="/projects/iris-moonyard.png" alt="MoonYard for Iris" width={700} height={700} className="object-cover w-1/3 " />
+                </a>
+              </div>
+              <div className="carousel-item">
+                <a href="https://redrobot.roboclub.org/" className="">
+                  <Image src="/projects/red-robot.png" alt="Robotics Club Red Robot" width={700} height={700} className="object-cover w-1/3 " />
+                </a>
+              </div>
+              <div className="carousel-item">
+                <a href="https://www.acmatcmu.com/hackcmu/" className="">
+                  <Image src="/projects/hackcmu.png" alt="ACM@CMU HackCMU" width={700} height={700} className="object-cover w-1/3 " />
+                </a>
+              </div>
+              <div className="carousel-item">
+                <a href="https://cmrocketcommand.wordpress.com/" className="">
+                  <Image src="/projects/rocket-club.png" alt="Carnegie Mellon Rocket Command" width={700} height={700} className="object-cover w-1/3 " />
+                </a>
+              </div>
             </div>
-
           </div>
 
         </section>
