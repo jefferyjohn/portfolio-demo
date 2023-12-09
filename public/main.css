@@ -89,6 +89,22 @@ body {
     background-size: cover;
 }
 
+.image-container {
+    position: relative;
+  }
+
+  .news-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
 @keyframes slide {
     0% {
         transform: translateX(0);
