@@ -1,0 +1,70 @@
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 600px) {
+    .nav {
+        top: 0;
+        right: auto;
+        width: 100%;
+        height: auto;
+    }
+}
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+#content {
+    background-image: url('/background.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-slide {
+    animation: slide 15s linear infinite;
+}
+
+.carousel-wrapper {
+    display: flex;
+    width: 200%;
+}
+
+.carousel-item {
+    flex: 0 0 16.67%;
+}
+
+#calendly {
+    height: 1000px;
+}
