@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://i.imgur.com/jBdBcvT.png',
-        width: 630,
-        height: 1200,
+        width: 1200,
+        height: 630,
         alt: 'Jeffery John | Portfolio',
       },
     ],

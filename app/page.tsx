@@ -104,7 +104,7 @@ export default function Home() {
                   <a href="https://top.mlh.io/2022/profiles/jeffery-john">
                     <div className="image-container">
                       <Image src="/media/mlh-top50.png" alt="Major League Hacking Top 50" width={400} height={400} className="object-cover w-full" />
-                      <div className="news-title">Major League Hacking Top 50</div>
+                      <div className="news-title">MLH | Major League Hacking Top 50</div>
                     </div>
                   </a>
                 </div>
@@ -112,7 +112,7 @@ export default function Home() {
                   <a href="https://www.redandblack.com/uganews/uga-s-small-satellite-research-lab-looks-to-the-stars-for-solutions-on-earth/article_0d71f854-36d3-11ec-8210-6f0ff0ab47f6.html" >
                     <div className="image-container">
                       <Image src="/media/small-sat.png" alt="UGA Small Satellite Research Lab" width={400} height={400} className="object-cover w-full" />
-                      <div className="news-title">UGA Small Satellite Research Lab</div>
+                      <div className="news-title">UGA | Small Satellite Research Lab</div>
                     </div>
                   </a>
                 </div>
@@ -120,7 +120,7 @@ export default function Home() {
                   <a href="https://news.uga.edu/traveling-mars-complicated-teamwork/" >
                     <div className="image-container">
                       <Image src="/media/fusion.png" alt="UGA Project FUSION" width={400} height={400} className="object-cover w-full" />
-                      <div className="news-title">UGA Project FUSION</div>
+                      <div className="news-title">UGA | Project FUSION</div>
                     </div>
                   </a>
                 </div>
@@ -128,7 +128,7 @@ export default function Home() {
                   <a href="https://news.uga.edu/student-tour-of-georgia-2020/">
                     <div className="image-container">
                       <Image src="/media/uga-tour.png" alt="Student Tour of Georgia" width={400} height={400} className="object-cover w-full" />
-                      <div className="news-title">Student Tour of Georgia</div>
+                      <div className="news-title">UGA | Student Tour of Georgia</div>
                     </div>
                   </a>
                 </div>
@@ -136,7 +136,7 @@ export default function Home() {
                   <a href="https://www.linkedin.com/pulse/acm-uga-2021-2022-uga-acm" >
                     <div className="image-container">
                       <Image src="/media/uga-acm.png" alt="ACM @ UGA 2021-2022 Recap" width={400} height={400} className="object-cover w-full" />
-                      <div className="news-title">ACM@UGA 2021-2022</div>
+                      <div className="news-title">UGA | ACM 2021-2022</div>
                     </div>
                   </a>
                 </div>
@@ -144,7 +144,7 @@ export default function Home() {
                   <a href="https://picoctf.org/about.html" >
                     <div className="image-container">
                       <Image src="/media/picoctf.png" alt="picoCTF Overview" width={400} height={400} className="object-cover w-full" />
-                      <div className="news-title">picoCTF Overview</div>
+                      <div className="news-title">picoCTF | Overview</div>
                     </div>
                   </a>
                 </div>
@@ -152,7 +152,7 @@ export default function Home() {
                   <a href="https://www.acmatcmu.com/hackcmu/" >
                     <div className="image-container">
                       <Image src="/media/hackcmu.png" alt="ACM@CMU HackCMU 2023" width={400} height={400} className="object-cover w-full" />
-                      <div className="news-title">ACM@CMU HackCMU 2023</div>
+                      <div className="news-title">CMU | ACM HackCMU 2023</div>
                     </div>
                   </a>
                 </div>
@@ -184,100 +184,100 @@ export default function Home() {
 
               <div className="carousel-item">
                 <a href="https://blink-weld.vercel.app/"  >
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/blink.png" alt="Retrieval Augmented Generation Chat App" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>RAG Chat App</div>
+                    <div className="image-container item-label">RAG Chat App</div>
                   </div>
                 </a>
 
               </div>
               <div className="carousel-item">
                 <a href="https://jefferyjohn.github.io/poke/">
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/poke.png" alt="Physics based simulator with drawing" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>Physics simulator</div>
+                    <div className="image-container item-label">Physics simulator</div>
                   </div>
                 </a>
               </div>
               <div className="carousel-item">
                 <a href="https://irislunarrover.space/">
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/iris-moonyard.png" alt="MoonYard for Iris" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>Sandbox for rover</div>
+                    <div className="image-container item-label">Sandbox for rover</div>
                   </div>
                 </a>
               </div>
               <div className="carousel-item">
                 <a href="https://redrobot.roboclub.org/" >
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/red-robot.png" alt="Mobile robot picker" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>Mobile robot picker</div>
+                    <div className="image-container item-label">Mobile robot picker</div>
                   </div>
                 </a>
               </div>
               <div className="carousel-item">
                 <a href="https://www.acmatcmu.com/hackcmu/" >
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/hackcmu.png" alt="ACM@CMU HackCMU" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>ACM@CMU HackCMU 2023</div>
+                    <div className="image-container item-label">ACM@CMU HackCMU 2023</div>
                   </div>
                 </a>
               </div>
               <div className="carousel-item">
                 <a href="https://cmrocketcommand.wordpress.com/" >
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/rocket-club.png" alt="Carnegie Mellon Rocket Club" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>Carnegie Mellon Rocker Club</div>
+                    <div className="image-container item-label">Carnegie Mellon Rocket Club</div>
                   </div>
                 </a>
               </div>
               {/* Duplicate slides so that it's a seamless loop */}
               <div className="carousel-item">
                 <a href="https://blink-weld.vercel.app/" >
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/blink.png" alt="Retrieval Augmented Generation Chat App" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>RAG Chat App</div>
+                    <div className="image-container item-label">RAG Chat App</div>
                   </div>
                 </a>
 
               </div>
               <div className="carousel-item">
                 <a href="https://jefferyjohn.github.io/poke/" aria-label="Physics based siumulator with drawing">
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/poke.png" alt="Physics based simulator with drawing" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>Physics simulator</div>
+                    <div className="image-container item-label">Physics simulator</div>
                   </div>
                 </a>
               </div>
               <div className="carousel-item">
                 <a href="https://irislunarrover.space/">
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/iris-moonyard.png" alt="MoonYard for Iris" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>Sandbox for rover</div>
+                    <div className="image-container item-label">Sandbox for rover</div>
                   </div>
                 </a>
               </div>
               <div className="carousel-item">
                 <a href="https://redrobot.roboclub.org/" >
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/red-robot.png" alt="Mobile robot picker" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>Mobile robot picker</div>
+                    <div className="image-container item-label">Mobile robot picker</div>
                   </div>
                 </a>
               </div>
               <div className="carousel-item">
                 <a href="https://www.acmatcmu.com/hackcmu/" >
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/hackcmu.png" alt="ACM@CMU HackCMU" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>ACM@CMU HackCMU 2023</div>
+                    <div className="image-container item-label">ACM@CMU HackCMU 2023</div>
                   </div>
                 </a>
               </div>
               <div className="carousel-item">
                 <a href="https://cmrocketcommand.wordpress.com/" >
-                  <div className="image-container" style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.5)', position: 'relative' }}>
+                  <div className="image-container boxShadow">
                     <Image src="/projects/rocket-club.png" alt="Carnegie Mellon Rocket Club" width={700} height={700} className="object-cover w-1/3 carousel-image" />
-                    <div className="project-title" style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', padding: '10px', background: 'rgba(0, 0, 0, 0.5)', color: '#fff' }}>Carnegie Mellon Rocket Club</div>
+                    <div className="image-container item-label">Carnegie Mellon Rocket Club</div>
                   </div>
                 </a>
               </div>
