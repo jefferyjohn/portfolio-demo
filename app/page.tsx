@@ -1,7 +1,5 @@
 "use client"
 import Image from "next/legacy/image"
-import { useEffect } from 'react';
-import { clarity } from 'react-microsoft-clarity';
 import "react-multi-carousel/lib/styles.css";
 import '../public/main.css';
 
@@ -15,16 +13,10 @@ import Script from 'next/script'
 
 export default function Home() {
 
-  // Clarity
-  useEffect(() => {
-    clarity.init('k0lg58jnzr');
-  }
-    , []);
-
   return (
     <main>
 
-      <Script
+      <Script id="microsoft-clarity"
         // As a limitation of NextJS, this is the only reliable way for the analytics script to be loaded
         dangerouslySetInnerHTML={
           {
@@ -40,7 +32,7 @@ export default function Home() {
          })(window, document, "clarity", "script", "k0lg58jnzr");`,
           }}
       />
-      <Script src="https://kit.fontawesome.com/cafed16778.js" crossOrigin="anonymous"></Script>
+      <Script id="font-awesome" src="https://kit.fontawesome.com/cafed16778.js" crossOrigin="anonymous"></Script>
 
 
       <header className="flex justify-end items-start">
