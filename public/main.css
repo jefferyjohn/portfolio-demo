@@ -1,20 +1,66 @@
 .nav {
     position: fixed;
     top: 0;
-    right: 0;
+    right: 20px;
     z-index: 1000;
+}
+
+.social:hover {
+    color: #c42130;
+}
+
+.carousel-image {
+    width: 700px;
+    height: 700px;
 }
 
 @media screen and (max-width: 600px) {
     .nav {
         top: 0;
-        right: auto;
         width: 100%;
-        height: auto;
-        /* Allow clicking through to media */
-        pointer-events: none;
+        z-index: 1000;
+        font-size: 10;
+        padding: 10px;
     }
+
+    #nav-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0; 
+        margin: 10;  
+
+    }
+
+    #name {
+        font-size: 80px;
+    }
+
+    .socials {
+        padding:10px;
+        font-size: 12px;
+    }
+
+    .social:hover {
+        color: #c42130;
+    }
+
+    #about {
+        font-size: 8px;
+    }
+
+    .carousel-item {
+        flex: 0 0 40%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .calendly-container {
+        padding-top: 80px;
+    }
+
 }
+
 
 :root {
     --foreground-rgb: 0, 0, 0;
@@ -40,7 +86,7 @@ body {
 #content {
     background-image: url('/background.png');
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
 }
 
 @keyframes slide {
@@ -68,7 +114,7 @@ body {
 
 .carousel-item {
     flex: 0 0 16.67%;
-    padding:0px;
+    padding: 0px;
     margin: 0px;
 }
 
