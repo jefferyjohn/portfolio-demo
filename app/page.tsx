@@ -160,7 +160,7 @@ export default function Home() {
                   <a href="https://www.forsythnews.com/local/lifestyles/club-at-pinecrest-combines-crafting-with-service/" >
                     <div className="image-container">
                       <Image src="/media/crafters-club.png" alt="Crafter's Club Pinecrest Academy" width={400} height={400} className="object-cover w-full" />
-                      <div className="news-title">Forsyth News | Crafter's Club</div>
+                      <div className="news-title">Forsyth News | Crafter&apos;s Club</div>
                     </div>
                   </a>
                 </div>
