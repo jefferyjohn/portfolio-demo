@@ -16,20 +16,20 @@ export const metadata: Metadata = {
   title: 'Jeffery John | Portfolio',
   description: 'Meet Jeffery John - a developer and designer @ CMU!',
   openGraph: {
-    title: 'Next.js',
-    description: 'The React Framework for the Web',
+    title: 'Jeffery John | Portfolio',
+    description: 'Meet Jeffery John - a developer, designer, and hacker @ CMU!',
     url: 'https://jefferyjohn.com',
-    siteName: 'Next.js',
+    siteName: 'Jeffery John',
     images: [
       {
-        url: '../public/og-image.png',
+        url: 'https://i.imgur.com/zwMN9dg.png',
         width: 800,
         height: 600,
       },
       {
-        url: '../public/og-image.png',
-        width: 1800,
-        height: 1600,
+        url: 'https://i.imgur.com/jBdBcvT.png',
+        width: 630,
+        height: 1200,
         alt: 'Jeffery John | Portfolio',
       },
     ],
