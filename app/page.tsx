@@ -40,12 +40,12 @@ export default function Home() {
       <header className="flex justify-end items-start">
         <div className="nav">
           <ul id="nav-links" className="flex space-x-4 pt-5 shadow-xl rounded-full p-3">
-            <li><a href="#home" className="text-xl">Home</a></li>
-            <li><a href="https://docs.google.com/document/d/e/2PACX-1vQGcTnn04P98Dhf_3I_VcoWb4gJdDe_Fx9C5PSYBOawNxDKwoqhXAHjuABavXHeTCAFeHlT20NmfrTx/pub" className="text-xl">Resume</a></li>
-            <li><a href="https://docs.google.com/document/d/e/2PACX-1vT5R1FEjbl1pmb2dP8ZfhcxLsTrRrUKNT8HEIF5YH6IQfM_tiXbDdu4h9xkk_T47Q/pub" className="text-xl">98-019</a></li>
-            <li><a href="#media" className="text-xl">Media</a></li>
-            <li><a href="#projects" className="text-xl">Projects</a></li>
-            <li><a href="#contact" className="text-xl">Contact</a></li>
+            <li><a href="#home" className="nav-link">Home</a></li>
+            <li><a href="https://docs.google.com/document/d/e/2PACX-1vQGcTnn04P98Dhf_3I_VcoWb4gJdDe_Fx9C5PSYBOawNxDKwoqhXAHjuABavXHeTCAFeHlT20NmfrTx/pub" className="nav-link">Resume</a></li>
+            <li><a href="https://docs.google.com/document/d/e/2PACX-1vT5R1FEjbl1pmb2dP8ZfhcxLsTrRrUKNT8HEIF5YH6IQfM_tiXbDdu4h9xkk_T47Q/pub" className="nav-link">98-019</a></li>
+            <li><a href="#media" className="nav-link">Media</a></li>
+            <li><a href="#projects" className="nav-link">Projects</a></li>
+            <li><a href="#contact" className="nav-link">Contact</a></li>
           </ul>
         </div>
       </header>
