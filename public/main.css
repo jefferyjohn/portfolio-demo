@@ -219,7 +219,9 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
+    max-width: 700px;
     padding: 10px;
+    padding-bottom: 0px;
     background: rgba(0, 0, 0, 0.5);
     color: #ffffff;
     z-index: 1; 
